@@ -16,4 +16,4 @@ const fib=function(num){
     
     
     }
-    console.log("fibonnaci of number is 8",fib((10)));
+    console.log("fibonnaci of number is 8",fib((8)));
