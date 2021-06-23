@@ -1,0 +1,16 @@
+{
+  "name": "app15",
+  "version": "1.0.0",
+  "description": "this is my MEAN Game Application",
+  "main": "App15.js",
+  "scripts": {
+    "start": "node app15.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MEAN",
+    "GAMES"
+  ],
+  "author": "Desta",
+  "license": "ISC"
+}
