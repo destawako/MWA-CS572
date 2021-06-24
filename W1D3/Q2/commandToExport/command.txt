@@ -1,0 +1,1 @@
+mongoexport --db SchoolDB --collection Students --out output/Students.json --jsonArray --pretty
