@@ -1,0 +1,32 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 90px;
+}
+
+.padded {
+    padding-top: 30px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 105x;
+    background-color: #777772;
+    padding-top: 5px;
+}
+#hid{
+  text-align: center;
+  text-shadow: 2px;
+  background-color:darkorange;
+  
+}
+#imagebgrd
+{
+    background-image: url("../images/jobImage.jpg");
+   
+}
