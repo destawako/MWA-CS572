@@ -1,0 +1,22 @@
+<h2>Information about movie: 
+    <p>{{vm.movie.title}} 
+        <movie-rating stars={{vm.rating}}></movie-rating>
+    </p>
+</h2>
+
+
+
+<p> 
+    
+    Made Year: {{vm.movie.year}} <br>
+    Genre: {{vm.movie.genres}}<br>
+    Max Movie Duration: {{vm.movie.duration}}<br>
+    ReleasedDate: {{vm.movie.releaseDate  | date:"medium"}}<br>
+    <!-- Actor: {{vm.movie.actors}} <br> -->
+    
+        <li ng-repeat="movied in vm.movie.actors">
+            <p>{{movied.name}}</p>
+        </li>
+    
+
+</p>

@@ -1,0 +1,73 @@
+
+
+<form class="form-horizontal" #studentupdate = "ngForm" (ngSubmit)="updateOneStudent(studentupdate)">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend>UPDATING STUDENTS PROFILE</legend>
+    <div class="form-group">
+      <!-- <label class="col-md-4 control-label" for="pname">FIRST NAME</label>   -->
+      <!-- <div class="col-md-4">
+      <input id="pname" name="pname" type="text" placeholder="" class="form-control input-md" required="">
+      
+      </div> -->
+
+      <!-- {{students.firstname}} -->
+    </div>
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="pname">FIRST NAME</label>  
+      <div class="col-md-4">
+      <input id="pname" name="pname" [(ngModel)]="students.firstname" type="text" placeholder="" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Select Basic -->
+   
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="DVFCZ">LAST NAME</label>  
+      <div class="col-md-4">
+      <input id="DVFCZ" name="DVFCZ"  [(ngModel)]="students.lastname" type="text" placeholder="" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="KKKO">STUDENT ID</label>  
+      <div class="col-md-4">
+      <input id="KKKO" name="KKKO" [(ngModel)]="students.studentid" type="text" placeholder="" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="CCC">STUDENT ENTRY</label>  
+      <div class="col-md-4">
+      <input id="CCC" name="CCC" [(ngModel)]="students.studententry" type="text" placeholder="" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Text input--
+    </div>
+    
+    <!-- Button (Double) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="button1idFFF"></label>
+      <div class="col-md-8">
+        <button id="button1idFFF" type="submit" name="button1idFFF" class="btn btn-success">UPDATE</button>
+        <a id="button2id" href="/" name="button2id" class="btn btn-danger">CANCEL</a>
+        <span><a id="button2id" href="/" name="button2id" class="btn btn-danger">DELETE</a></span>
+
+      </div>
+    </div>
+
+
+    
+    </fieldset>
+    </form>

@@ -1,0 +1,51 @@
+<H3 style="text-align: center;">Welcome to the Students Page</H3>
+<div>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="/login" role="tab" aria-controls="home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="students/qrcode" role="tab" aria-controls="contact" aria-selected="false">QR Code</a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="students/update" role="tab" aria-controls="profile" aria-selected="false"> Update Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="students/courses" role="tab" aria-controls="profile" aria-selected="false"> Choose More Courses</a>
+    </li>
+    
+  </ul>
+ 
+</div>
+
+<div>
+
+  <img style="margin-left: 400px;margin-top: 20px;" [src] = "url" height="100"><br>
+        
+</div><br>
+
+<h3 style="margin-left: 360px;margin-top: 20px;text-decoration: underline;">Course You are taking</h3>
+
+
+<div style="margin-top: 20px;" class="container">
+  <div class="row col-md-6 col-md-offset-2 custyle">
+  <table class="table table-striped custab">
+  <thead>
+      <tr>
+          <th>ID</th>
+          <th>Course Name</th>
+          <th>Course Code</th>
+      </tr>
+   </thead>
+
+
+          <tr *ngFor="let course of students.course">
+              <td>{{course._id}}</td>
+              <td>{{course.coursename}}</td>
+              <td>{{course.coursecode}}</td>
+          </tr>
+
+  </table>
+  </div>
+</div>

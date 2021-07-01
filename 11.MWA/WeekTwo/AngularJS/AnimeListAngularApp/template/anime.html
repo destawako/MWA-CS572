@@ -1,0 +1,21 @@
+<H1> This is the Anime page.</H1>
+
+    <ul>
+        <li ng-repeat="anime in animeCtrl.animes">
+            <span><strong>Title</strong></span> : {{anime.title.text}}<br/>
+            <span><strong>Studio</strong></span>: {{anime.studio}}<br/>
+    
+            <span><strong>Show Anime Description:</strong></span>
+            <input type="checkbox" ng-model="showPunchline" />
+            <div ng-show="showPunchline">
+                <i>
+                    {{anime.description}} <hr>
+                    <span><strong>Start Date:</strong></span>{{anime.start_date}} <hr>
+                </i>
+            </div>
+    
+    
+        </li>
+    </ul>
+
+

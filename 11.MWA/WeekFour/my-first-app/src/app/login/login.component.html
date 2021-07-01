@@ -1,0 +1,28 @@
+
+    <div class="sidenav">
+      <div class="login-main-text">
+         <h1>Mean Static Page Application<br> Login Page</h1><br>
+         <h2 style="color:bisque;"><p>Login or register from here to access.</p></h2>
+      </div>
+   </div>
+   <div class="main">
+      <div class="col-md-6 col-sm-12">
+         <div class="login-form">
+            <form [routerLink]="['studentspage']">
+               <div class="form-group">
+                  <label>User Name</label>
+                  <input type="text" class="form-control" placeholder="User Name">
+               </div>
+               <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" placeholder="Password">
+               </div>
+               <button type="submit" class="btn btn-black">Login</button>
+               <a href="register" class="btn btn-secondary">Register</a>
+               <a href="faculty/login" style="color:aqua;" title="" class="forgot-pwd">Log in as Faculty?</a>
+            </form>
+         </div>
+      </div>
+   </div>
+
+

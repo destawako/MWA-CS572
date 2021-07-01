@@ -1,0 +1,31 @@
+
+<h3 style="text-decoration: underline;color: antiquewhite; margin-left: 200px;">Please Register For Available Courses</h3>
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th class="text-center">Action</th>
+        </tr>
+     </thead>
+
+  
+            <tr *ngFor="let course of course">
+                <td>{{course._id}}</td>
+                <td>{{course.coursename}}</td>
+                <td>{{course.coursecode}}</td>
+                <td class="text-center">
+                    <a class='btn btn-info btn-xs' href="courses/{{course._id}}">Select {{course.coursecode}} </a> 
+                </td> 
+
+            </tr>
+
+
+
+    </table>
+    </div>
+</div>

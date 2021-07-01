@@ -1,0 +1,16 @@
+{
+  "name": "expressapplication",
+  "version": "1.0.0",
+  "description": "MEAN games",
+  "main": "mean_games.js",
+  "scripts": {
+    "start": "node mean_games.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Biniam A",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "express": "^4.17.1"
+  }
+}

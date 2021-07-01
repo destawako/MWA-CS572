@@ -1,0 +1,108 @@
+<!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>-->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/faculty.css">
+
+
+</head>
+<body>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="/" role="tab" aria-controls="home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="/attendance/faculty/qrcode-camera" role="tab" aria-controls="contact" aria-selected="false">Enable QR code</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="attendance-tab" data-toggle="tab" href="/attendance/students/get-all-students" role="tab" aria-controls="attendance" aria-selected="false">Attendance</a>
+          </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      </div>
+    <!--  -->
+    
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+        <a href="/attendance/students/register" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Student</a>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Student Id</th>
+                <th>Student Entry</th>
+
+                <th class="text-center">Action</th>
+            </tr>
+         </thead>
+                <tr>
+                    <td>1</td>
+                    <td>Biniam</td>
+                    <td>Tsehaye</td>
+                    <td>112323</td>
+                    <td>Fall</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/attendance/students/update"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/attendance/students/get-all-students" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+                        <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Add QR gen secret</a></td>
+                    
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Esrom</td>
+                    <td>Tsehaye</td>
+                    <td>112323</td>
+                    <td>Fall</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/attendance/students/update"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/attendance/students/get-all-students" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+                        <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Add QR gen secret</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Esrom</td>
+                    <td>Tsehaye</td>
+                    <td>112323</td>
+                    <td>Fall</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/attendance/students/update"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/attendance/students/get-all-students" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+                        <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Add QR gen secret</a></td>
+                </tr>
+        </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="test-muted text-center">
+                <a href="https://compro.miu.edu" target="_blank">
+                    <img src="/images/compro-web-logo-442x112.png" height="60" alt="MIU compro">
+                </a>
+                <br>
+                <small class="text black-50 text-center">
+                    &copy; 2021 Maharishi International University. All Rights Reserved.
+                </small>
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

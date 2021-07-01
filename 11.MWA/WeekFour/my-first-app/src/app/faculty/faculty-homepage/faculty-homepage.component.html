@@ -1,0 +1,74 @@
+<!-- <link rel = "stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+<body>
+<nav>
+<div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+        aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+        aria-selected="false">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="faculty/qrcode-camera" role="tab"
+        aria-controls="contact" aria-selected="false">Enable QR code</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="attendance-tab" data-toggle="tab" href="attendance" role="tab" aria-controls="attendance"
+        aria-selected="false">Attendance</a>
+    </li>
+  </ul>
+</div>
+
+<a href="#" class="toggle-button">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</a>
+
+<div class="navbar-links">
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</div>
+</nav>
+<!--  -->
+
+<div class="container">
+  <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab" id="">
+      <thead>
+        <a href="register" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Student</a>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Student Id</th>
+          <th>Student Entry</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+
+      <tr *ngFor="let stu of games">
+        <td>{{ stu._id }}</td>
+        <td>
+          <a href="students/getbyid/{{ stu._id }}">{{ stu.firstname }}</a>
+        </td>
+        <td>{{ stu.lastname }}</td>
+        <td>{{ stu.studentid }}</td>
+        <td>Fall</td>
+        <td class="text-center">
+          <a class="btn btn-info btn-xs" href="students/update/{{ stu._id }}"><span
+              class="glyphicon glyphicon-edit"></span> Edit</a>
+          <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+          <!-- <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Add QR gen secret</a> -->
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>

@@ -8,7 +8,7 @@
     <input style="color: red;" type="submit" value="submit">
 </form> -->
 <center>
-    <h2>Table of our jobs(Pagination)</h2>
+    <h2>list of jobs</h2>
 </center>
 
 <table class="table table-hover">
@@ -42,7 +42,7 @@
 <div class="container">
 
     <button style="float: left;" ng-hide="vm.offset==0" ng-click=" vm.nextPage( 'prev') " class="btn btn-primary btn-lg ">Previous</button>
-    <a href="/#/search"> <button style="margin-left: 25vw; margin-right: 25vw; " class="btn btn-primary btn-lg">To Search </button></a>
+    <!-- <a href="/#/search"> <button style="margin-left: 25vw; margin-right: 25vw; " class="btn btn-primary btn-lg">To Search </button></a> -->
     <button style=" float: right; " ng-hide="vm.maxCount<=(vm.offset+vm.count) " type="button " ng-click="vm.nextPage( 'next') " class="btn btn-primary btn-lg ">Next</button>
 </div>
 <br>
@@ -53,7 +53,7 @@
             <h5>
                 <BR/> Title: <input type="text " name="title " class="form-control " required ng-model="vm.newjobTitle " style="color:black " />
                 <BR/> Salary: <input type="text " name="salary " class="form-control " required ng-model="vm.newjobsalary " style="color:black " />
-                <BR/> Description: <input type="text " name="description " class="form-control " required ng-model="vm.newjobdescription " style="color:black " />
+                <BR/> Description:<input type="text " name="description " class="form-control " required ng-model="vm.newjobdescription " style="color:black " />
                 <BR/> Experience: <input type="text " name="experience " class="form-control " required ng-model="vm.newjobdexperience " style="color:black " />
                 <BR/> PostDate: <input type="text " name="PostDate " class="form-control " required ng-model="vm.newPostDatee " style="color:black " />
 

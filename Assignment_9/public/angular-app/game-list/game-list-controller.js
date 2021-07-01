@@ -32,10 +32,11 @@ function GamesController($routeParams, GameDataFactory, $route) {
         console.log("here ...")
         if (vm.gameForm.$valid) {
             console.log("inside valid");
+         
             GameDataFactory.addOneGame(savethis).then(function(response) {
                 console.log("Game saved");
                 $route.reload();
-                // return response.data;
+                return response.data;
             }).catch(function(error) {
                 console.log(error);
             });

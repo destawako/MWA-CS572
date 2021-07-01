@@ -1,0 +1,48 @@
+<div>
+        <h5 style="margin-left: 170px;">This is {{student.firstname}}'s Student Page</h5>
+        <img style="margin-left: 200px;" [src] = "url" height="100"><br>
+               
+
+</div>
+ 
+ 
+        <div style="align-content: center;">
+                <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Student Id</th>
+                        <th>Student Entry</th>
+                        <th>Student Taking Courses</th>
+
+                        <!-- <th class="text-center">Action</th> -->
+                    </tr>
+                 </thead>
+            
+              
+                        <tr>
+                            <td>1</td>
+                            <td>{{student.firstname}}</td>
+                            <td>{{student.lastname}}</td>
+                            <td>{{student.studentid}}</td>
+                            <td>{{student.studententry}}</td>
+                            <td  *ngFor="let course of student.course">
+                                    <strong>{{course.coursename}}</strong></td>
+
+                            <!-- <td class="text-center"> -->
+                                <!-- <a class='btn btn-info btn-xs' href="students/update"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a> -->
+                                <!-- <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Add QR gen secret</a> -->
+                            <!-- </td> -->
+            
+                        </tr>
+            
+            
+            
+                </table>
+                </div>
+            </div>
+
+    

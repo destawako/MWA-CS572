@@ -1,0 +1,43 @@
+<h1>{{vm.title}}</h1>
+
+
+<div>
+    <form name="vm.movieForm" class="form-inline my-2 my-lg-0" ng-submit="vm.search()">
+        <input ng-model="vm.searchMovie" class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button type="submit" class="btn btn-secondary my-2 my-sm-0" >Search</button>
+    </form>  
+    
+         <ul>
+            <li ng-repeat="movie in vm.movies | filter:vm.searchMovie">
+                <a ng-href="#!/movie/{{movie._id}}">{{movie.title}}</a>  
+            </li>
+        </ul>
+    </div>
+<ul>
+    <!-- <li ng-repeat="movie in vm.movies">
+        <a ng-href="#!/movie/{{movie._id}}">{{movie.title}}</a>
+    </li> -->
+</ul>
+
+
+<div ng-if="vm.isLoggedIn()">
+<form name="vm.movieForm" ng-submit="vm.addMovie()">
+    To add a new Movie please fill in all the fields below: <br/>
+    Title: <input type="text" name="title" required ng-model="vm.newMovieTitle" style="color: black"><br/>
+    Year : <input type="text" name="year" required ng-model="vm.newMovieYear" style="color: black"><br/>
+    Genres: <input type="text" name="genre" ng-model="vm.newMovieGenre" style="color: black"><br/>
+                     <!-- ng-minlength=1 ng-maxlength=2 min="1" max="5" /><br/> -->
+    Duration: <input type="text" name="duration" ng-model="vm.newMovieDuration" style="color: black"
+                     ng-min=1 ng-max=10 / ><br/>
+    ReleaseDate: <input type="date" name="releaseDate" ng-model="vm.newMovieReleaseDate" style="color: black"
+                       ng-min ="1" ng-max="10" ></input>
+
+   <button type="submit" class="btn-success">Add Movie</button><br/>
+
+</form>
+
+
+</div>
+
+
+    

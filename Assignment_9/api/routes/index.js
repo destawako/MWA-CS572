@@ -27,6 +27,8 @@ router.route("/games/:gameId/reviews")
     .post(reviews.addreviews)
     .get(reviews.getallreviews);
 
+    console.log("inside index file")
+
 router.route("/games").get(controller.displayall)
     .post(controller.addone);
 
@@ -34,6 +36,5 @@ router.route("/games/:gameId").get(controller.display1)
     .put(controller.updateput)
     .delete(controller.gamesDeleteOne)
     .patch(controller.updatepatch);
-//60aab3ecd8080b4bece093b4
-//60aab3e3d8080b4bece093b3
+
 module.exports = router;

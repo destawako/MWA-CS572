@@ -1,0 +1,39 @@
+<h1>{{vm.title}}</h1>
+
+<ul>
+    <li ng-repeat="movie in vm.movies">
+        <a ng-href="#!/movie/{{movie._id}}">{{movie.title}}</a>
+        <span><button ng-click="vm.deleteMovie(movie._id)" style="color: black">Delete</button></span>
+    </li>
+</ul>
+
+
+
+
+
+<div>
+    <form name="vm.movieForm" ng-submit="vm.addMovie()">
+    To add a new Movie please fill in all the fields below: <br/>
+    Title: 
+    <input type="text" name="title" required ng-model="vm.newMovieTitle" style="color: black"><br/>
+    Year : 
+    <input type="text" name="year" required ng-model="vm.newMovieYear" style="color: black" pattern="[0-9]{4}">
+    <span ng-show="vm.movieForm.year.$dirty && vm.movieForm.year.$invalid" style="color: red;">
+        Please add a valid date.
+     </span><br/><br/>
+    Genre: <input type="text" name="genre1" ng-model="vm.newMovieGenre" style="color: black"><br/>
+
+    Duration: <input type="text" name="duration" ng-model="vm.newMovieDuration" style="color: black"
+                      ><br/>
+    ReleaseDate: <input type="date" name="releaseDate" ng-model="vm.newMovieReleaseDate" style="color: black"
+                        ></input>
+            <span ng-show="vm.movieForm.releaseDate.$dirty && vm.movieForm.releaseDate.$invalid" style="color: red;">
+                Please add a valid date.
+             </span><br/>
+
+
+   <button type="submit" class="btn-success">Add Movie</button><br/>
+
+   </form>
+
+</div>

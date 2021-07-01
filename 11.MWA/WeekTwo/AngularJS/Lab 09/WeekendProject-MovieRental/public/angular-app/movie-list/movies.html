@@ -1,0 +1,30 @@
+<h1>{{vm.title}}</h1>
+
+<ul>
+    <li ng-repeat="movie in vm.movies">
+        <a ng-href="#!/movie/{{movie._id}}">{{movie.title}}</a>
+    </li>
+</ul>
+
+
+
+
+<form name="vm.movieForm" ng-submit="vm.addMovie()">
+    To add a new Movie please fill in all the fields below: <br/>
+    Title: <input type="text" name="title" required ng-model="vm.newMovieTitle" style="color: black"><br/>
+    Year : <input type="text" name="year" required ng-model="vm.newMovieYear" style="color: black"><br/>
+    Genres: <input type="text" name="genre" ng-model="vm.newMovieGenre" style="color: black"><br/>
+                     <!-- ng-minlength=1 ng-maxlength=2 min="1" max="5" /><br/> -->
+    Duration: <input type="text" name="duration" ng-model="vm.newMovieDuration" style="color: black"
+                     ng-min=1 ng-max=10 / ><br/>
+    ReleaseDate: <input type="date" name="releaseDate" ng-model="vm.newMovieReleaseDate" style="color: black"
+                       ng-min ="1" ng-max="10" ></input>
+            <!-- <span ng-show="vm.movieForm.maxPlayers.$dirty && vm.movieForm.minPlayers.$invalid">
+                The max players is between 1 and 10.
+             </span><br/> -->
+    <!-- Minimum player Age: <input type="text" name="minAge" required ng-model="vm.newMovieMinAge" style="color: black"><br/>
+    Disigner: <input type="text" name="designer" required ng-model="vm.newMovieDesigner" style="color: black"><br/> -->
+
+   <button type="submit" class="btn-success">Add Movie</button><br/>
+
+</form>

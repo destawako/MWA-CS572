@@ -1,0 +1,19 @@
+<h1 class="title">
+    {{vm.job.title | uppercase}}
+</h1>
+
+<p class="job" >
+    <div class="job" id="job">
+        <span class="spans"><strong>Title</strong></span> : {{vm.job.title}}<br/>
+        <span class="spans"><strong>Job Salary</strong></span> : {{vm.job.salary | currency}}<br/>
+        <span class="spans"><strong>Job Description</strong></span> : {{vm.job.description}}<br/>
+        <span class="spans"><strong>Job Experience</strong></span> : {{vm.job.experience}}<br/>
+        <span class="spans"><strong>Job Posted Date</strong></span>: {{vm.job.postdate | date:"medium"}}<br/>
+        <span class="spans"><strong>Skills</strong></span>: {{vm.job.skills[0]}}, {{vm.job.skills[1]}}<br/>
+        <!-- <span class="spans"><strong>Location</strong></span>:  -->
+        <!-- <li ng-repeat="job in vm.jobs.location"> -->
+            <p>{{vm.job.location.lat}}</p>
+            <p>{{vm.job.location.lng}}</p>
+        <!-- </li> -->
+    </div>
+</p>

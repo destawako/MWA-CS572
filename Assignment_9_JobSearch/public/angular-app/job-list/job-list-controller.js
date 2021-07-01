@@ -2,7 +2,7 @@ angular.module("meanjobs").controller("jobsController", jobsController);
 
 function jobsController($routeParams, jobDataFactory, $route) {
     const vm = this;
-    vm.count = 2;
+    vm.count = 5;
     vm.offset = 0;
     vm.title = "Search for Job";
     // let jobId = $routeParams.id;

@@ -1,0 +1,47 @@
+<h1 class="title" id="listOfJobs">{{vm.title | uppercase}}</h1>
+
+<div>
+
+
+<ul>
+    <li ng-repeat="job in vm.jobs">
+        <a ng-href="#!/job/{{job._id}}">{{job.title}}</a>
+        <span><button ng-click="vm.deleteOneJob(job._id)" style="color: black">Delete</button></span>
+
+    </li>
+</ul>
+
+<ul>
+
+<div>
+    <form name="vm.jobForm" ng-submit="vm.addJob()">
+
+        Title:
+        <input type="text" name="title" required ng-model="vm.newJobTitle" style="color: black ;" placeholder="Enter title"><br/>
+        Salary : 
+        <input type="text" name="salary" required ng-model="vm.newJobSalary" style="color: black" placeholder="Enter Salary">
+        <span ng-show="vm.movieForm.year.$dirty && vm.movieForm.year.$invalid" style="color: red;">
+            Please add a valid date.
+         </span><br/><br/>
+        Experience: 
+        <input type="text" name="experience" ng-model="vm.newJobExperience" style="color: black" placeholder="Enter Experience"><br/>
+    
+        Description:
+         <input type="text" name="description" ng-model="vm.newJobDescription" style="color: black" placeholder="Enter Descriptions"
+                    ><br/>
+        Skills
+         <input type="text" name="skills" ng-model="vm.newJobSkills1" style="color: black" placeholder="Enter Skills"
+                          ><input type="text" name="skills" ng-model="vm.newJobSkills2" style="color: black" placeholder="Enter skills"
+                          ><br/>
+        Post Date: <input type="date" name="postDate" ng-model="vm.newJobPostDate" style="color: black"
+                            placeholder="Enter postDate"></input>
+                <span ng-show="vm.jobForm.postDate.$dirty && vm.jobForm.postDate.$invalid" style="color: red;">
+                    Please add a valid date.
+                 </span><br/>
+         <button type="submit" class="btn-success"> Add Job</button>
+    </form>
+</div>
+</ul>
+
+
+<div ng-if="vm.isSubmitted" style="color: green;">{{vm.newJobTitle}} is successfully added</div>

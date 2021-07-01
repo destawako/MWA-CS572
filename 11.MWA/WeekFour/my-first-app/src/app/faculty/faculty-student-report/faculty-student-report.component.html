@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+        <button (click)="exportexcel()" class="btn btn-primary btn-xs pull-right">Export To Excel</button>
+    <table id="attendance" class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Student Id</th>
+            <th>Attendance</th>
+        </tr>
+     </thead>
+
+  
+            <tr *ngFor="let attendance of attendance.attendance">
+                <td>1</td>
+                <td>{{attendance.date}}</td>
+                <td>{{attendance.studentid}}</td>
+                <td>{{attendance.attendance}}</td>
+            
+            </tr>
+    </table>
+    </div>
+</div>
